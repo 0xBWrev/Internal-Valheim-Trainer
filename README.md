@@ -1,88 +1,88 @@
 # Valheim Trainer
 
-A trainer for Valheim with a menu you open inside the game. You run `ValheimTrainer.exe` and it gets the trainer into Valheim for you. Nothing else needed: no BepInEx, no Jötunn, no devcommands.
+This is my trainer for Valheim, with a menu you open inside the game. You run `ValheimTrainer.exe` and it loads the trainer into the game. You don't need BepInEx, Jötunn or devcommands.
 
-I wrote it for a dedicated server I share with two friends. We play PvE, so I gave myself one rule: whatever the trainer does, it does to my own character, and everyone else is left alone. That rule shaped most of it, and where it doesn't hold, the [On a server](#on-a-server) section says so.
+I made it for a dedicated server I play on with two friends. We play PvE, so I set one rule: the trainer only changes my own character and leaves everyone else alone. Where it can't keep that rule, I explain it in [On a server](#on-a-server).
 
-It started out as a Cheat Engine table. Same cheats, quite a few more on top, and no second window to keep alive while you play.
+It started as a Cheat Engine table. It has the same cheats and a lot more, and I don't need a second window open while I play.
 
 ## Download
 
-Grab the zip from [Releases](../../releases/latest). 
+Get the zip from [Releases](../../releases/latest). I write what changed in the notes of each release.
 
-This repository holds the releases and the issue tracker. The source code isn't published.
+I only publish the compiled trainer here. The source code isn't public.
 
 ## Install
 
-Unzip it anywhere. The two files that matter have to stay in the same folder:
+Put these two files in the same folder. Any folder works:
 
 - `ValheimTrainer.exe`
 - `ValheimTrainer.dll`
 
-Run `ValheimTrainer.exe` whenever you like, before or after Valheim. It'll wait for the game to show up, load the trainer, and tell you when it's in. From there, **Insert** or **F1** opens the menu.
+Run `ValheimTrainer.exe` before or after you start Valheim. It waits for the game, loads the trainer and tells you when it's done. Then press **Insert** or **F1** in the game to open the menu.
 
-One thing that catches people: if Valheim is running as administrator, the exe has to as well.
+If you run Valheim as administrator, run the exe as administrator too.
 
-Done playing? **Unload trainer** at the bottom of the menu takes it back out. And if you ever need everything off right now, **End** is the panic key: every feature off, every window closed.
+When you're done, press **Unload trainer** at the bottom of the menu. If you need everything off right away, press **End**. It turns every feature off and closes every window.
 
 ## The menu
 
-Six tabs: Player, Combat, Inventory, World, Build, Travel. Every feature is a checkbox, and the ones with knobs to turn have a **+** next to them. The buttons along the bottom of each tab are one-off actions rather than toggles. There's a search box above the tabs, which is honestly the fastest way to find anything once the list got this long.
+There are six tabs: Player, Combat, Inventory, World, Build and Travel. Every feature is a checkbox, and the ones with settings have a **+** next to them. The buttons at the bottom of each tab do something once. The search box above the tabs is the fastest way to find something now that the list is this long.
 
-You can drag the window wherever you want it, and **Settings...** handles the cosmetic side: text size, dark or light, and how see-through the windows are. Every hotkey can be rebound. Your settings live in `ValheimTrainer.cfg` next to the game's saves, in `%USERPROFILE%\AppData\LocalLow\IronGate\Valheim`. Which features you had switched on isn't saved, and that's deliberate: every session starts clean with everything off.
+You can move the window anywhere. In **Settings...** you can change the text size, pick a dark or light theme, set how transparent the windows are and change every hotkey. Your settings are saved in `ValheimTrainer.cfg`, next to the game's saves in `%USERPROFILE%\AppData\LocalLow\IronGate\Valheim`. The features you had on are not saved. I did that on purpose, so every session starts with everything off.
 
-After a Valheim update, hit **Check compatibility** before anything else. It goes looking for everything the trainer needs from the game, turns none of it on, and tells you what broke. And if something does break while it's running, the trainer quietly switches that one feature off rather than taking the rest down with it.
+After a Valheim update, press **Check compatibility** first. It checks everything the trainer needs from the game without turning anything on, and tells you what broke. If a feature breaks while it's on, the trainer turns that one off and the rest keeps working.
 
 ## What's in it
 
-**Player.** Reverse Damage is the one I actually use. You take less, the attacker gets some of it back, you heal over time, and your health won't drop past a floor you set. Next to it sit god mode, ghost mode, no debuffs, and keeping everything on death. Then the numbers: higher base health and stamina, three stamina modes depending on how far you want to take it, infinite eitr, food that never runs down, always rested, Forsaken power with no cooldown. Movement speed, a higher jump without the fall damage that normally comes with it, flight, no weight limit, armor that doesn't slow you down, a longer auto-pickup reach, faster skill gain. There's also a party aura that heals and buffs the players around you, and Share my features for friends who run the trainer too.
+**Player.** Reverse Damage is the one I use the most. You take less damage, the attacker gets part of it back, you heal over time, and your health never goes below the minimum you set. There's also god mode, ghost mode, no debuffs and keeping everything when you die. Then the stats: higher base health and stamina, three stamina modes, infinite eitr, food that doesn't run out, always rested and no cooldown on the Forsaken power. For moving around there's movement speed, a higher jump without fall damage, flying, no weight limit, armor without the speed penalty, a longer auto-pickup range and faster skill gain. And there's a party aura that heals and buffs the players near you, plus Share my features for friends who also run the trainer.
 
-**Combat.** More damage against creatures. Chopping and mining sped up, or down to a single hit when you've got a forest in the way. Infinite ammo, and an aimbot for bows. More loot, with an option to make the trophy always drop. ESP for enemies, friends, ore, treasure, pickables, dropped items and dungeons. Switch off the ones you don't need, your framerate will thank you.
+**Combat.** More damage to creatures. Faster chopping and mining, or one hit if you just want the forest gone. Infinite ammo and a bow aimbot. More loot, with an option to always drop the trophy. ESP for enemies, friends, ore, treasure, pickables, dropped items and dungeons. I turn off the ones I don't need, because each one costs frames.
 
-**Inventory.** This tab started as pure laziness. Infinite durability, bigger stacks, extra rows, teleport with anything, food and potions that don't get consumed, crafting and building straight out of nearby chests, and a filter so auto-pickup stops hoovering up junk you'll never use. The buttons do the boring part: add items, clean out the inventory, repair everything, stack into nearby chests, sort the backpack, or edit an item directly.
+**Inventory.** I made this tab because I was lazy. Infinite durability, bigger stacks, extra rows, teleport with any item, food and potions that don't get used up, crafting and building from nearby chests, and a filter so auto-pickup leaves the junk on the ground. The buttons add items, clean the inventory, repair everything, stack into nearby chests, sort the backpack and edit an item.
 
-**World.** Lock the time of day, lock the weather, clear the fog. Yes, that includes the Mistlands mist. Faster production, plants that grow instantly and yield more, no fuel needed, instant taming. A HUD with coordinates, biome, day, time and FPS, plus a free camera, camera zoom and a bigger map reveal radius. The buttons reveal bosses and traders, tame the animals around you, spawn creatures, or explore the whole map. Game speed lives here too, read [the note about it](#on-a-server) before you touch it.
+**World.** Fixed time of day, fixed weather and no fog, Mistlands mist included. Faster production, plants that grow instantly and give more, no fuel needed and instant taming. A HUD with coordinates, biome, day, time and FPS, a free camera, more camera zoom and a bigger map reveal radius. The buttons reveal bosses and traders, tame the animals around you, spawn creatures or explore the whole map. Game speed is here too. Read what I say about it in [On a server](#on-a-server) before you use it.
 
-**Build.** Free building and crafting, longer reach, bigger terrain leveling, infinite support, no rain damage, and planting wherever you like. One button repairs every structure around you, and terraform (raise, lower, level, smooth) comes with an undo, which you will end up needing.
+**Build.** Free building and crafting, longer reach, bigger terrain leveling, infinite support, no rain damage and planting anywhere. One button repairs every structure around you, and terraform (raise, lower, level, smooth) has an undo. You'll probably need it.
 
-**Travel.** Tailwind and a faster boat, because sailing in this game is lovely for about the first twenty hours. Teleports to the last pin, any pin, the map cursor, your bed, wherever you died, another player, or a position you saved earlier.
+**Travel.** Tailwind and a faster boat, because sailing gets slow after a while. Teleport to the last pin, any pin, the map cursor, your bed, where you died, another player, or a position you saved.
 
 ## On a server
 
-Your friends don't need the trainer, and they won't notice most of it.
+My friends don't need the trainer, and most of it never touches them.
 
-- Combat features never touch players or tamed animals. The damage boost, kill nearby, the aimbot, enemy ESP, the reflected damage, none of them.
-- Reverse Damage ignores hits that came from another player, so it won't make you a wall in PvP.
-- The only things the trainer sends another player's way are the good ones: the heal button and the party aura. Both ride on what the game already lets players do to each other. The aura skips anyone with PvP on, the heal button heals everyone in range.
-- Share my features only reaches friends who run the trainer too. Anyone can turn it down with **Accept features shared by others**, and nothing is applied to a player with PvP on.
-- Beyond that, nothing can reach someone who isn't running the trainer. Damage, stamina and inventory are all worked out on each player's own PC.
-- It won't start raids or events, won't touch the server's global keys, and won't delete structures.
-- Crafting from chests leaves other people's private chests alone, along with chests behind a ward you don't have access to, chests somebody currently has open, and tombstones.
+- Combat features never affect players or tamed animals. That includes the extra damage, kill nearby, the aimbot, enemy ESP and the damage Reverse Damage sends back.
+- Reverse Damage ignores hits from other players, so it doesn't help you in PvP.
+- The only things the trainer does to other players are the heal button and the party aura. Both use what the game already lets players do to each other. The aura skips anyone with PvP on, but the heal button heals everyone in range.
+- Share my features only reaches friends who also run the trainer. They can refuse it by unticking **Accept features shared by others**, and nothing is applied to a player with PvP on.
+- Apart from that, nothing reaches a player who doesn't run the trainer. Damage, stamina and inventory are worked out on each player's own PC.
+- It doesn't start raids or events, doesn't touch the server's global keys and doesn't delete structures.
+- Crafting from chests skips other players' private chests, chests in a ward you can't open, chests someone has open, and tombstones.
 
-Now the awkward part, because a few things can't really be "mine only":
+Some things can't be only mine, and you should know about them:
 
-- God mode and ghost mode are the game's own switches, not mine. They don't care who's swinging at you, so turn them off before any PvP.
-- The world features (production, fuel, plants, fire, structural support, rain damage, taming) only apply in zones your client owns, which usually means whoever got there first. Standing in a friend's zone, they do nothing at all.
-- Game speed is client side. Day and night still follow the server's clock, but creatures in zones you own move at your speed, and friends standing nearby will see that.
-- Spawned creatures, terraforming, and anything you pull out of a shared chest change the world for everybody. Terraforming doesn't stop at wards either. Talk to your group first.
-- Killing things in god or ghost mode marks the loot as cheated. In practice that only matters for Steam achievements and stats, but if those matter to you, bear in mind that cheating on a character is something Valheim keeps a note of.
+- God mode and ghost mode are the game's own switches. They protect you from everyone, players too, so I turn them off before any PvP.
+- World features (production, fuel, plants, fire, support, rain damage, taming) only work in zones your game owns, which is usually whoever got there first. In a friend's zone they do nothing.
+- Game speed only runs on your side. Day and night follow the server's clock, but creatures in your zones move at your speed, and friends nearby will see it.
+- Spawned creatures, terraforming and anything you take from shared chests change the world for everyone. Terraforming also ignores wards. Ask your group first.
+- If you kill things in god or ghost mode, the loot is marked as cheated. That only matters for Steam achievements and stats, but Valheim does remember that the character cheated.
 
-Three buttons write to your character permanently and there's no taking them back: **Raise skills**, **Unlock everything** and **Explore the whole map**. The last two ask you first.
+Three buttons change your character for good: **Raise skills**, **Unlock everything** and **Explore the whole map**. The last two ask first.
 
-**Bigger stacks** and **More inventory rows** want the trainer loaded before you enter the world. Stacks go back to their normal size when you leave or switch it off. Whatever sits in the extra rows is kept as long as the trainer was loaded first. If you stop using it, or you're going to load it after entering the world, empty those rows first, or the game drops what's in them.
+**Bigger stacks** and **More inventory rows** need the trainer loaded before you enter the world. Stacks go back to normal when you leave or turn the feature off. Items in the extra rows are kept as long as the trainer was loaded first. If you stop using the trainer, or you're going to load it after entering the world, empty those rows first or the game drops what's in them.
 
 ## If something goes wrong
 
-- **It doesn't load.** `ValheimTrainer.exe` will tell you why, and `ValheimTrainer.log` next to it has the full story.
-- **The message appeared but Insert does nothing.** Try F1. A lot of laptops don't have an Insert key at all.
-- **CPU or temperatures through the roof.** Check Game speed first. Anything above x1 means the game is simulating more per second, and that costs CPU no matter what else you have on. A wide ESP range with pickables and dropped items will eat frames too. The End key switches everything off at once, which makes it easy to compare.
-- **One feature isn't working.** Press **Check compatibility** and read what it lists. Trainer lines in `Player.log`, in the same folder as the settings, start with `[ValheimTrainer]`.
-- **Antivirus is unhappy.** Fair enough, loading code into another program is exactly what malware does, so some scanners flag the exe. If you'd rather not add an exception, you can inject `ValheimTrainer.dll` into `valheim.exe` with any LoadLibrary injector instead.
+- **It doesn't load.** `ValheimTrainer.exe` tells you why, and `ValheimTrainer.log` next to it has the details.
+- **The message shows up but Insert does nothing.** Try F1. A lot of laptops don't have an Insert key.
+- **High CPU or temperatures.** Check Game speed first. Above x1 the game simulates more every second, and that costs CPU whatever else is on. A big ESP range with pickables and dropped items also costs frames. End turns everything off, so you can compare.
+- **A feature doesn't work.** Press **Check compatibility** and read the list. Trainer lines in `Player.log`, in the same folder as the settings, start with `[ValheimTrainer]`.
+- **Your antivirus complains.** Loading code into another program is also what malware does, so some antivirus programs flag the exe. If you don't want to add an exception, inject `ValheimTrainer.dll` into `valheim.exe` with any LoadLibrary injector.
 
-If none of that helps, [open an issue](../../issues) and attach `ValheimTrainer.log` along with what Check compatibility says.
+If none of that helps, [open an issue](../../issues) and attach `ValheimTrainer.log`.
 
 ## Credits
 
-Patching is done with [Harmony](https://github.com/pardeike/Harmony) by Andreas Pardeike (MIT). Released under the MIT license, see [LICENSE](LICENSE).
+The patching uses [Harmony](https://github.com/pardeike/Harmony) by Andreas Pardeike (MIT). The trainer is MIT too, see [LICENSE](LICENSE). The zip has the license and Harmony's notice as well.
 
-Not affiliated with Iron Gate or Coffee Stain in any way. Use it on servers where everyone's fine with it.
+I'm not affiliated with Iron Gate or Coffee Stain. Only use it on servers where everyone is fine with it.
