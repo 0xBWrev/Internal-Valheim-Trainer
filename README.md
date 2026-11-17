@@ -8,7 +8,7 @@ It started out as a Cheat Engine table. Same cheats, quite a few more on top, an
 
 ## Download
 
-Grab the zip from [Releases](../../releases/latest). What changed in each version is in [CHANGELOG.md](CHANGELOG.md).
+Grab the zip from [Releases](../../releases/latest). 
 
 This repository holds the releases and the issue tracker. The source code isn't published.
 
